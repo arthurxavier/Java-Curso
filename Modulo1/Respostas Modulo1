@@ -1,0 +1,90 @@
+1. Qual a diferença entre JRE e JDK?
+JRE: Java Runtime Environment contém tudo aquilo que um usúario comum
+precisa para executar uma aplicação Java(JVM e bibliotecas), como o
+próprio nome diz é o "Ambiente de Execução Java"
+
+JDK: Java Development Kit é composto pelo JRE e um conjunto de
+ferramentas úteis ao desenvolvedor Java.
+
+Resumo:	JRE:Ambiente de execução java 
+	JDK:Kit de ferramenta úteis
+
+
+2. Quais são os componentes da JDK?
+Principais ferramentas do JDK:
+	-javac: Compilador da ling. Java; 	arquivo.java -> arquivo.class
+	-java: Interpretador Java;		executa o arquivo.class
+
+	-jdb: Debugador Java;
+	-java-prof: Interpretador com opção para gerar estatísticas
+	sobre o uso dos métodos;
+	-javadoc: Gerador de documentação;
+	-jar: Ferramenta que comprime, lista e expande;
+	-appletviewer: Permite a execução e debug de applets sem browser;
+	-javap:Permite ler a interface pública das classes;
+	-extcheck: Detecta conflitos em arquivos Jar;
+
+Padrão de Nomeclatura SUN:
+	Classes e interfaces: Primeira letre maiuscula (cada palavra);
+		ClasseTeste;
+	Método: primeira letra minuscula, depois aplica camelCase;
+		metodoTeste();
+	Variáveis: primeira letra minuscula, depois aplica camelCase;
+		variavelTeste;
+	Constantes: Todas letras maiusculas
+		CONSTANTE;
+
+3. Instale o JDK na sua máquina.
+OK
+
+4. Crie uma classe que imprima o seguinte texto “Terminei o módulo 3 com um
+programa Java!”.
+	teste.java
+5. Compile e execute a classe desenvolvida no exercício anterior.
+	javac teste.java          	gera: teste.class
+	java  teste			executa: teste.class
+6. Comente o trecho de código responsável pela execução da impressão, compile e
+execute.
+	Não aconteceu nada.
+
+7. Mude o nome do método “main” para “start”, compile e execute. O que
+aconteceu?
+Erro: o método main não foi encontrado na classe TesteStart; defina o método main como:
+   public static void main(String[] args)
+ou uma classe de aplicativo JavaFX deve expandir javafx.application.Application
+
+8. Mude novamente o nome do método “main”, agora para “#main”, compile e
+execute. O que aconteceu?
+
+
+9. Qual dos exercícios, 7 ou 8, gerou uma exceção durante a compilação? E
+durante a execução?
+Durante Compilaçãp:Exercicio 8
+
+javac M1Ex8.java 
+M1Ex8.java:3: error: illegal character: '#'
+	public static void	#main(String[] parametros)
+	                  	^
+M1Ex8.java:3: error: invalid method declaration; return type required
+	public static void	#main(String[] parametros)
+	                  	 ^
+2 errors
+
+
+Durante Execução: Exercicio 7
+
+java M1Ex7
+Erro: o método main não foi encontrado na classe M1Ex7; defina o método main como:
+   public static void main(String[] args)
+ou uma classe de aplicativo JavaFX deve expandir javafx.application.Application
+
+
+Resumo:
+	Vantagens java:
+	-JVM responsavel por rodar o codigo
+		Cada SO tem um tipo, porem dessa forma qualquer 
+		codigo java consegue ser lido independente da maquina;
+	-Gerencia de Memoria:	tira a responsabilidade do programador
+	e torna o Coletor de Lixo responsavel por quando liberar memoria;
+	-Fases: Programa.java -> Compilador -> Programa.class -> JVM-> Bits
+	
