@@ -6,7 +6,6 @@ public class FuncionarioBasico extends Funcionario{
 		super(nome,codigo,comissao);
 		setEscola(escola);
 		rendaTotal();
-		System.out.println("Comissão: "+getComissao()+"   RendaTotal"+rendaTotal()+"  RendaFinal "+getRendaFinal());
 	}
 
 	public void setEscola(String escola){

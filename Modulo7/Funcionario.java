@@ -39,4 +39,8 @@ public class Funcionario{
 	public double getComissao(){
 		return comissao.getAdicional();
 	}
+
+	public void exibeDados(){
+		System.out.println("Funcionario: "+getNome()+"  Comissão: "+getComissao()+"  Salário Total: "+getRendaFinal());
+	}
 }

@@ -17,6 +17,7 @@ public class Empresa {
 		funcionarios.add(new FuncionarioSuperior("Leticia","101031",new Gerente() ,"Escola A","Escola AX","UFU"));
 		
 
+		exibeDadosFuncionarios(funcionarios);
 		calculaCustosSalarios(funcionarios);
 	}
 
@@ -26,7 +27,15 @@ public class Empresa {
 		{
 			custos += f.getRendaFinal();
 		}
+		System.out.println("");
 		System.out.println("Custos com salarios: " + custos);
+	}
+
+	public static void exibeDadosFuncionarios(ArrayList<Funcionario> funcionarios){
+		double custos = 0.0;
+		for (Funcionario f:funcionarios){ 
+			f.exibeDados();
+		}
 	}
 
 }
